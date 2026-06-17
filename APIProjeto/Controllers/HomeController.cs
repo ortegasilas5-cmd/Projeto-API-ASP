@@ -18,7 +18,7 @@ namespace APIProjeto.Controllers
         public async  Task<IActionResult> Index()
         {
             var cliente = _httpClientFactory.CreateClient();
-            var response = await cliente.GetFromJsonAsync<List<Postagem>>("");
+            var response = await cliente.GetFromJsonAsync<List<Postagem>>("https://jsonplaceholder.typicode.com/posts?_limit=6");
             return View(response);
         }
 
