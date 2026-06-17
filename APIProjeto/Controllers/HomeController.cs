@@ -19,7 +19,7 @@ namespace APIProjeto.Controllers
         {
             var cliente = _httpClientFactory.CreateClient();
             var response = await cliente.GetFromJsonAsync<List<Postagem>>("");
-            return View();
+            return View(response);
         }
 
         
